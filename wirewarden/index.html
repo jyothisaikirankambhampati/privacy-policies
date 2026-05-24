@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WireWarden – Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0a0a0a;
+      color: #d4d4d4;
+      line-height: 1.75;
+      padding: 0 16px 64px;
+    }
+    header {
+      background: #111;
+      border-bottom: 1px solid #222;
+      padding: 32px 0 24px;
+      text-align: center;
+      margin: 0 -16px 40px;
+    }
+    header h1 { font-size: 26px; color: #fff; font-weight: 700; letter-spacing: -0.3px; }
+    header p  { font-size: 13px; color: #666; margin-top: 6px; letter-spacing: 0.5px; }
+    .container { max-width: 760px; margin: 0 auto; }
+    .badge {
+      display: inline-block;
+      background: #0d2b1a;
+      border: 1px solid #00cc70;
+      color: #00cc70;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      color: #00cc70;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      margin: 36px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    p { margin-bottom: 12px; color: #bbb; font-size: 15px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    ul li { margin-bottom: 6px; color: #bbb; font-size: 15px; }
+    strong { color: #e0e0e0; }
+    .highlight-box {
+      background: #0d2b1a;
+      border: 1px solid #00cc7040;
+      border-left: 3px solid #00cc70;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin: 16px 0 24px;
+    }
+    .highlight-box p { margin: 0; color: #a0d4b8; font-size: 15px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 14px; }
+    th {
+      background: #161616;
+      color: #00cc70;
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid #222;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    td {
+      padding: 9px 14px;
+      border: 1px solid #1e1e1e;
+      color: #bbb;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #0f0f0f; }
+    a { color: #00cc70; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid #1e1e1e;
+      text-align: center;
+      font-size: 12px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>WireWarden</h1>
+  <p>Privacy Policy &nbsp;·&nbsp; Effective Date: May 25, 2025</p>
+</header>
+
+<div class="container">
+
+  <div class="badge">NO DATA COLLECTED · NO DATA SHARED</div>
+
+  <h2>1. Overview</h2>
+  <div class="highlight-box">
+    <p>
+      WireWarden is a <strong>local, on-device VPN firewall</strong>.
+      It does <strong>not collect, store, transmit, or share any personal data</strong>
+      with the developer or any third party. All processing happens entirely on your device.
+    </p>
+  </div>
+  <p>
+    This Privacy Policy describes how WireWarden ("the App"), developed by
+    <strong>Jyothi Sai Kiran Kambhampati</strong>, handles information in connection with
+    your use of the App on Android devices. By installing or using WireWarden you
+    acknowledge this policy.
+  </p>
+
+  <h2>2. How the VPN Is Used</h2>
+  <p>
+    WireWarden uses Android's <strong>VpnService API</strong> to create a local VPN tunnel
+    entirely on your device. This tunnel intercepts network packets originating from
+    installed apps and either forwards them (allowed apps) or drops them (blocked apps)
+    based on rules you configure.
+  </p>
+  <p>
+    <strong>The VPN traffic never leaves your device.</strong> WireWarden does not act as
+    a proxy, does not route your traffic through any remote server, and does not inspect
+    packet payloads. The sole purpose of the VPN is to enforce per-app firewall rules locally.
+  </p>
+
+  <h2>3. Data We Collect</h2>
+  <p>WireWarden collects <strong>no data</strong>. Specifically:</p>
+  <ul>
+    <li>We do <strong>not</strong> collect personal information (name, email, location, etc.).</li>
+    <li>We do <strong>not</strong> log or inspect the content of any network traffic.</li>
+    <li>We do <strong>not</strong> collect usage statistics, analytics, or crash reports.</li>
+    <li>We do <strong>not</strong> use advertising SDKs or tracking libraries.</li>
+    <li>We do <strong>not</strong> access your contacts, camera, microphone, or files.</li>
+  </ul>
+
+  <h2>4. Data Stored on Your Device</h2>
+  <p>
+    WireWarden stores the following data <strong>locally on your device only</strong>,
+    using Android's Room database and SharedPreferences:
+  </p>
+  <table>
+    <tr>
+      <th>What is stored</th>
+      <th>Why</th>
+      <th>Where</th>
+    </tr>
+    <tr>
+      <td>Per-app firewall rules (WiFi / Mobile allowed or blocked)</td>
+      <td>To enforce your chosen rules across sessions and after reboot</td>
+      <td>Local SQLite database (Room)</td>
+    </tr>
+    <tr>
+      <td>Named firewall profiles</td>
+      <td>To let you save and switch between rule sets</td>
+      <td>Local SQLite database (Room)</td>
+    </tr>
+    <tr>
+      <td>VPN on/off state, battery prompt shown flag</td>
+      <td>App preferences between sessions</td>
+      <td>SharedPreferences (local)</td>
+    </tr>
+  </table>
+  <p>
+    This data never leaves your device unless you explicitly use the
+    <strong>Backup / Export</strong> feature to save a JSON file to a location you choose.
+  </p>
+
+  <h2>5. Permissions Explained</h2>
+  <table>
+    <tr>
+      <th>Permission</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>BIND_VPN_SERVICE</td>
+      <td>Required to create the local VPN tunnel for per-app traffic control</td>
+    </tr>
+    <tr>
+      <td>FOREGROUND_SERVICE / FOREGROUND_SERVICE_SPECIAL_USE</td>
+      <td>Keeps the VPN firewall active while the app is in the background</td>
+    </tr>
+    <tr>
+      <td>RECEIVE_BOOT_COMPLETED</td>
+      <td>Automatically restarts the firewall after device reboot if it was active</td>
+    </tr>
+    <tr>
+      <td>ACCESS_NETWORK_STATE</td>
+      <td>Detects whether the device is on WiFi or mobile data to apply the correct rule</td>
+    </tr>
+    <tr>
+      <td>INTERNET</td>
+      <td>Required by the VpnService API; no internet connections are made by the app itself</td>
+    </tr>
+    <tr>
+      <td>QUERY_ALL_PACKAGES</td>
+      <td>Reads the list of installed apps so you can set per-app firewall rules</td>
+    </tr>
+    <tr>
+      <td>KILL_BACKGROUND_PROCESSES</td>
+      <td>Terminates background processes of newly-blocked apps so rules take effect immediately</td>
+    </tr>
+    <tr>
+      <td>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</td>
+      <td>Prompts you to exempt WireWarden from battery saver, preventing the OS from stopping the firewall</td>
+    </tr>
+    <tr>
+      <td>BIND_QUICK_SETTINGS_TILE</td>
+      <td>Enables the Quick Settings tile for toggling the firewall from the notification shade</td>
+    </tr>
+  </table>
+
+  <h2>6. Third-Party Services</h2>
+  <p>
+    WireWarden does <strong>not</strong> integrate any third-party SDKs, analytics services,
+    advertising networks, or cloud backends. The app has no network activity of its own.
+  </p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>
+    WireWarden is not directed at children under the age of 13. We do not knowingly collect
+    information from children. Because the app collects no data at all, there is no special
+    risk to children's privacy.
+  </p>
+
+  <h2>8. Security</h2>
+  <p>
+    Because WireWarden does not transmit data to any server, there is no remote attack surface
+    for your personal data. Firewall rules are stored in the app's private data partition,
+    inaccessible to other apps without root access.
+  </p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>
+    If we make material changes to this Privacy Policy, we will update the effective date at
+    the top of this page and, where appropriate, notify users via a Play Store update note.
+    Continued use of the App after changes take effect constitutes acceptance of the updated policy.
+  </p>
+
+  <h2>10. Contact</h2>
+  <p>
+    If you have any questions about this Privacy Policy, please contact the developer:
+  </p>
+  <ul>
+    <li><strong>Developer:</strong> Jyothi Sai Kiran Kambhampati</li>
+    <li><strong>GitHub:</strong> <a href="https://github.com/jyothisaikirankambhampati/WireWarden" target="_blank">github.com/jyothisaikirankambhampati/WireWarden</a></li>
+  </ul>
+
+  <footer>
+    WireWarden &nbsp;·&nbsp; Version 3.0 &nbsp;·&nbsp; &copy; 2025 Jyothi Sai Kiran Kambhampati &nbsp;·&nbsp; All rights reserved
+  </footer>
+
+</div>
+</body>
+</html>
